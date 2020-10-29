@@ -118,14 +118,18 @@ def begin_end():
 
 @app.route("/")
 def welcome():
-	return ("<h1>Welcome to the Hawaii weather API</h1>"
-    f"<p>Available Routes</p>"
-    f"/api/v1.0/precipitation<br/>Returns a JSON list of percipitation data for the dates between 8/23/16 and 8/23/17<br/><br/>"
-    f"/api/v1.0/stations<br/>Returns a JSON list of the weather stations<br/><br/>"
-    f"/api/v1.0/tobs<br/>Returns a JSON list of the Temperature Observations (tobs) for each station for the dates between 8/23/16 and 8/23/17<br/><br/>"
-    f"/api/v1.0/date<br/>Returns a JSON list of the minimum temperature, the average temperature, and the max temperature for the dates between the given start date and 8/23/17<br/><br/>."
-    f"/api/v1.0/start_date/end_date<br/>Returns a JSON list of the minimum temperature, the average temperature, and the max temperature for the dates between the given start date and end date<br/><br/>."
-    )
+    return (
+        f"<h1><center>Welcome to the Hawaii weather API</center></h1>"
+        f"<h2><center>Available Routes:</center></h2>"
+        f"<p>/api/v1.0/precipitation</p>"
+        #f"<p><a href="http://127.0.0.1:5000/api/v1.0/precipitation">For precipitation data!</a></p>"
+        f"<p>/api/v1.0/stations</p>"
+        #f"<p><a href="http://127.0.0.1:5000/api/v1.0/stations"> For station data!</a></p>"
+        f"<p>/api/v1.0/tobs</p>"
+        #f"<p><a href="http://127.0.0.1:5000/api/v1.0/tobs"> For temperature data!</a></p>"
+        f"<p>/api/v1.0/begin</p>"
+        f"<p>/api/v1.0/begin_end</p>")
+
 
 if __name__ == '__main__':
     app.run(debug=True)
